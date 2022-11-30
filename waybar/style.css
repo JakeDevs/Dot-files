@@ -1,99 +1,169 @@
 * {
-  transition: none;
-  box-shadow: none;
-  font-family: JetBrainsMono;
-  font-size: 12.5px;
-  color: #89CFF0;
+	border: none;
+	border-radius: 0;
+	font-family: Nerd Font Hack;
+	font-size: 14px;
+	min-height: 24px;
 }
 
-#waybar {
-  margin-top: 14px;
-  background: #2C3136;
-  border-radius: 0px;
-  border: 2px transparent;
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+    margin-top: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+	border-radius: 10px;
+	transition: none;
+	/*
+    color: #f8f8f2;
+	background: #282a36;
+    */
+    color: transparent;
+	background: transparent;
+}
+
+window#waybar.termite #window,
+window#waybar.Firefox #window,
+window#waybar.Navigator #window,
+window#waybar.PCSX2 #window {
+    color: #4d4d4d;
+	background: #e6e6e6;
 }
 
 #workspaces {
-  margin: 0 3px;
-  color: transparent;
+	margin-top: 8px;
+	margin-left: 5px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	background: #282a36;
+	transition: none;
 }
 
 #workspaces button {
-  margin: 3px 0;
-  padding: 0 4px;
-}
-
-#workspaces button.visible {
+	transition: none;
+	color: #f8f8f2;
+	background: transparent;
+	font-size: 16px;
 }
 
 #workspaces button.focused {
-  border-radius: 10px;
-  background-color: rgba(0,0,0,0.4);
+	color: #9aedfe;
 }
 
-#workspaces button.urgent {
-  border-radius: 10px;
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: #ff79c6;
 }
 
-#workspaces button.urgent * {
-  color: rgba(246,71,71,0.8);
+#mpd {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	background: #282a36;
+	transition: none;
+	color: #4d4d4d;
+	background: #5af78e;
 }
 
-#tray {
-  margin: 3px 2px;
-  border-radius: 12px;
-  background-color: rgba(0,0,0,0.4);
+#mpd.disconnected,
+#mpd.stopped {
+	color: #f8f8f2;
+	background: #282a36;
 }
 
-#tray * {
-  padding: 0 6px;
-  border-left: 1px solid black;
+#network {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
 }
 
-#tray *:first-child {
-  border-left: none;
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
 }
 
-#mode, #battery, #cpu, #disk, #memory, #network, #pulseaudio, #idle_inhibitor, #backlight, #mpd, #clock, #temperature {
-  margin: 4px 2px;
-  padding: 0 6px;
-  border-radius: 20px;
-  min-width: 10px;
-  background-color: transparent;
+#temperature {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
+}
+
+#cpu {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
+}
+
+#memory {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
 }
 
 #clock {
-  margin: 4px 2px;
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
 }
 
-#mpd *{
-  min-width: 10px;
-  font-size: 11px;
-  font-family: JetBrainsMono;
-}
-
-#custom-power{
-  margin: 4px 5px 4px 1px;
-  padding: 0 6px;
-  background-color: #722F37;
-  border-radius: 10px;
-  min-width: 15px;
-}
-
-#custom-recorder, #custom-audiorec {
-  margin: 4px 2px;
-  padding: 0 6px;
-  background-color: rgba(175,65,84,0.8);
-}
-
-#custom-launcher{
-  margin: 4px 1px 4px 5px;
-  padding: 0 6px;
-  background-color: #722F37;
-  border-radius: 10px;
-  min-width: 15px;
-}
-
-#temperature.critical {
-  color: #800020;
+#tray {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 5px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 0;
+	border-radius: 10px;
+	transition: none;
+	color: #f8f8f2;
+	background: #282a36;
 }
