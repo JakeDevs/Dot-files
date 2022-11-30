@@ -1,7 +1,7 @@
 {
 	"layer": "top",
-	"modules-left": ["wlr/workspaces", "mpd", "hyprland/window"],
-	"modules-center": [],
+	"modules-left": ["wlr/workspaces", "mpd",],
+	"modules-center": ["custom/weather"],
 	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "clock", "tray",],
 	"mpd": {
 		"tooltip": false,
@@ -43,5 +43,13 @@
 	"tray": {
 		"spacing": 10
 	},
+	"custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 60,
+        "exec": "$HOME/.config/waybar/scripts/weather.py",
+        "return-type": "json"
+    },
+
 }
 
