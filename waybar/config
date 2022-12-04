@@ -2,7 +2,7 @@
 	"layer": "top",
 	"modules-left": ["wlr/workspaces", "mpd",],
 	"modules-center": ["custom/weather"],
-	"modules-right": ["network", "pulseaudio", "temperature", "cpu", "memory", "clock", "tray",],
+	"modules-right": ["network", "pulseaudio", "cpu", "memory", "clock", "tray",],
 	"mpd": {
 		"tooltip": false,
 		"format": "{stateIcon} {artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S})",
@@ -32,9 +32,8 @@
 	},
 	"clock": {
     	"interval": 60,
-    	"format": "{:%H:%M}",
-    	"max-length": 25,
-		"timezone": "America/New_York"
+    	"format": "{:%H:%M %Z}",
+		"timezone": "US/Eastern"
 	},
 	"memory": {
 		"tooltip": false,
@@ -46,7 +45,7 @@
 	"custom/weather": {
         "format": "{}",
         "tooltip": true,
-        "interval": 60,
+        "interval": 1800,
         "exec": "$HOME/.config/waybar/scripts/weather.py",
         "return-type": "json"
     },

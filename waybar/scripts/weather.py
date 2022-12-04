@@ -58,7 +58,7 @@ WEATHER_CODES = {
 data = {}
 
 
-weather = requests.get("https://wttr.in/Tampa, Florida?format=j1").json()
+weather = requests.get("https://wttr.in/47.203.67.52?format=j1").json()
 
 
 def format_time(time):
