@@ -49,6 +49,8 @@
         "exec": "$HOME/.config/waybar/scripts/weather.py",
         "return-type": "json"
     },
-
+	"wlr/workspaces": {
+		"on-click": "activate",
+	},
 }
 

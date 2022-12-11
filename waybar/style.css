@@ -52,7 +52,7 @@ window#waybar.PCSX2 #window {
 	font-size: 16px;
 }
 
-#workspaces button.focused {
+#workspaces button.active {
 	color: #9aedfe;
 }
 
@@ -60,7 +60,7 @@ window#waybar.PCSX2 #window {
 	transition: none;
 	box-shadow: inherit;
 	text-shadow: inherit;
-	color: #ff79c6;
+	color: #7980ff;
 }
 
 #mpd {
